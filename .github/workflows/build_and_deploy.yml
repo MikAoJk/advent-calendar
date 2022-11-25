@@ -8,7 +8,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: /christmas-calendar
+      NEXT_PUBLIC_BASE_PATH: /advent-calendar
     steps:
       - name: Checkout
         uses: actions/checkout@v3

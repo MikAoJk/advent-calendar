@@ -1,5 +1,5 @@
-## Christmas calendar
-A simple website for a Christmas calendar
+## Advent calendar
+A simple website for a Advent calendar
 
 ## Technologies
 * Yarn
@@ -27,4 +27,4 @@ yarn  dev
 This project is maintained by [CODEOWNERS](CODEOWNERS)
 
 Questions and/or feature requests?
-Please create an [issue](https://github.com/MikAoJk/christmas-calendar/issues)
+Please create an [issue](https://github.com/MikAoJk/advent-calendar/issues)

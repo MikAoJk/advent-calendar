@@ -1,11 +1,11 @@
 import styles from "../../styles/Home.module.css";
 
-const ChristmasCalender = () => {
+const AdventCalender = () => {
     return (
         <div className={styles.main}>
-            <h2>Christmas calendar</h2>
+            <h2>Advent calendar</h2>
         </div>
     )
 }
 
-export default ChristmasCalender;
+export default AdventCalender;

@@ -1,7 +1,7 @@
 {
-  "name": "christmas-calendar",
+  "name": "advent-calendar",
   "version": "0.1.0",
-  "homepage": "https://mikaojk.github.io/christmas-calendar",
+  "homepage": "https://mikaojk.github.io/advent-calendar",
   "private": true,
   "scripts": {
     "dev": "next dev",

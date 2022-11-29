@@ -108,8 +108,10 @@ const AdventCalender = () => {
             }
         ]
 
-    const todaysDay = new Date().getDate();
-    const isTodaysHach = todaysDay === clickedHatch?.day
+    const todaysDate = new Date()
+    const todaysDay = todaysDate.getDate();
+    const isTodaysHach = (todaysDate.getMonth() != 11) && todaysDay === clickedHatch?.day
+
 
     const onOpenHandler = (hatcheData: HatcheData) => {
         setClickedHatch(hatcheData)
@@ -124,10 +126,10 @@ const AdventCalender = () => {
         <div className={styles.main}>
             <h2>Advent calendar</h2>
             {(!isTodaysHach && !modalClosed) &&
-                <ShowNotTodayModal onClose={onCloseModalHandler}></ShowNotTodayModal>}
+                <ShowNotTodayModal day={clickedHatch?.day} toDay={todaysDate} onClose={onCloseModalHandler}></ShowNotTodayModal>}
             {(isTodaysHach && !modalClosed) &&
                 <ShowPriceModal text={clickedHatch?.price} onClose={onCloseModalHandler}></ShowPriceModal>}
-            {hatchesData.map(hatcheData =>
+            {modalClosed && hatchesData.map(hatcheData =>
                 <Hatche key={hatcheData.day} hatcheData={hatcheData} onOpen={onOpenHandler}/>
             )}
         </div>

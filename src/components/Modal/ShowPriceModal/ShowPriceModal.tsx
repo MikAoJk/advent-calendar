@@ -15,7 +15,7 @@ const ShowPriceModal = (showPriceModalProps: ShowPriceModalProps) => {
         <div className={styles.modal}>
             <div className={styles.modal_content}>
                 <div className={styles.modal_header}>
-                    <h4 className={styles.modal_title}>Today's price is:</h4>
+                    <h4 className={styles.modal_title}>Today&apos;s price is:</h4>
                 </div>
                 <div className={styles.modal_body}>
                     {showPriceModalProps.text}

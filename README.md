@@ -1,3 +1,5 @@
+[![build and deploy main branch](https://github.com/MikAoJk/advent-calendar/actions/workflows/build_and_deploy.yml/badge.svg)](https://github.com/MikAoJk/advent-calendar/actions/workflows/build_and_deploy.yml)
+
 ## Advent calendar
 A simple website for a Advent calendar
 

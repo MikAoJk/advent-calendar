@@ -1,7 +1,13 @@
 import styles from "./AdventCalender.module.css";
 import Hatche, {HatcheData} from "../Hatche/Hatche";
+import ShowPriceModal from "../Modal/ShowPriceModal/ShowPriceModal";
+import {useState} from "react";
+import ShowNotTodayModal from "../Modal/ShowNotTodayModal/ShowNotTodayModal";
 
 const AdventCalender = () => {
+
+    const [clickedHatch, setClickedHatch] = useState<HatcheData>()
+    const [modalClosed, setModalClosed] = useState(true)
 
     const hatchesData: HatcheData[] =
         [{
@@ -102,11 +108,27 @@ const AdventCalender = () => {
             }
         ]
 
+    const todaysDay = new Date().getDate();
+    const isTodaysHach = todaysDay === clickedHatch?.day
+
+    const onOpenHandler = (hatcheData: HatcheData) => {
+        setClickedHatch(hatcheData)
+        setModalClosed(false)
+    };
+
+    const onCloseModalHandler = () => {
+        setModalClosed(true)
+    };
+
     return (
         <div className={styles.main}>
             <h2>Advent calendar</h2>
+            {(!isTodaysHach && !modalClosed) &&
+                <ShowNotTodayModal onClose={onCloseModalHandler}></ShowNotTodayModal>}
+            {(isTodaysHach && !modalClosed) &&
+                <ShowPriceModal text={clickedHatch?.price} onClose={onCloseModalHandler}></ShowPriceModal>}
             {hatchesData.map(hatcheData =>
-                <Hatche key={hatcheData.day} hatcheData={hatcheData}/>
+                <Hatche key={hatcheData.day} hatcheData={hatcheData} onOpen={onOpenHandler}/>
             )}
         </div>
     )

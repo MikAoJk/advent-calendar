@@ -21,7 +21,7 @@ const ShowNotTodayModal = (showNotTodayModalProps: ShowNotTodayModalProps) => {
         <div className={styles.modal}>
             <div className={styles.modal_content}>
                 <div className={styles.modal_header}>
-                    <h4 className={styles.modal_title}>You cannot open hatche number {showNotTodayModalProps.day} today!
+                    <h4 className={styles.modal_title}>You cannot open hatche number: {showNotTodayModalProps.day}!
                     </h4>
                 </div>
                 <div className={styles.modal_body}>

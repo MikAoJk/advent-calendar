@@ -110,9 +110,8 @@ const AdventCalender = () => {
 
     const todaysDate = new Date()
     const todaysDay = todaysDate.getDate();
-    const isMonthDecember = todaysDate.getMonth() != 11
-    const isTodaysHach = isMonthDecember && todaysDay === clickedHatch?.day
-
+    const isMonthDecember = todaysDate.getMonth() == 11
+    const isTodaysHach = isMonthDecember && (todaysDay === clickedHatch?.day)
 
     const onOpenHandler = (hatcheData: HatcheData) => {
         setClickedHatch(hatcheData)

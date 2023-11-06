@@ -19,9 +19,15 @@ yarn --version
 
 ### Running the application locally
 
+Install all the dependencies listed within package.json with this command:
+```bash
+yarn
+```
+
+
 Run the development server with this command:
 ```bash
-yarn  dev
+yarn dev
 ```
 
 ## Contact

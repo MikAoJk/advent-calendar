@@ -1,5 +1,5 @@
 .modal {
-    width: 500px;
+    width: 100%;
     background: black;
     border: 1px solid #ccc;
     transition: 1.1s ease-out;
@@ -18,9 +18,14 @@
     margin: 0;
 }
 
+.modal_boddy {
+    color: white;
+    background: black;
+}
+
 
 .modal_footer {
-
+    margin-top: 10px;
 }
 .modal_header {
     overflow: hidden;

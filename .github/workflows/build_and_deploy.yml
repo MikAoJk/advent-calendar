@@ -32,6 +32,8 @@ jobs:
         run: yarn install --immutable
       - name: Build
         run: yarn build
+      - name: Export
+        run: yarn export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

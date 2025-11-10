@@ -1,5 +1,5 @@
 ## Advent calendar
-A simple website for a Advent calendar
+A simple website for a advent calendar
 
 ## Technologies
 * Yarn
